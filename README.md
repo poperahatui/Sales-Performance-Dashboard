@@ -12,7 +12,7 @@ In this project, I acted as a Big Data Analyst Intern who was asked to analyse a
 Base tables are tables that contain original data or raw data collected from the source and contain information needed to answer questions or solve certain problems.
 
 Here is the query for the base table :
-
+```
 -- Create Base Table
 CREATE TABLE tabel_base AS (
   SELECT
@@ -36,12 +36,12 @@ CHANGE COLUMN `id_invoice` `id_invoice` VARCHAR(255) NOT NULL,
 ADD PRIMARY KEY (`id_invoice`);
 CREATE INDEX idx_orderlist ON tabel_base (id_invoice(50), nama_customer(50));
 CREATE INDEX idx_salelist ON tabel_base (nama_customer(50), nama_barang(50));
-
+```
 ### Aggregate Table
 Aggregate tables are tables created by collecting and calculating data from base tables. This aggregate table contains more concise information and is used to analyze data more quickly and efficiently. The results of this table will be used as a source for creating sales report dashboards.
 
 Here is the query for the aggregate table :
-
+```
 -- Create Aggregate Table --
 CREATE TABLE tabel_aggregate AS (SELECT id_invoice,
     tanggal,
@@ -58,6 +58,6 @@ CREATE TABLE tabel_aggregate AS (SELECT id_invoice,
     SUM(jumlah_barang) AS total_quantity FROM
     tabel_base
 GROUP BY id_invoice , tanggal , cabang_sales , nama_customer , 'group' , nama_barang , brand , jumlah_barang , unit , harga);
-
+```
 ## Data Visualization
 View on Looker Data Studio page (https://lookerstudio.google.com/u/0/reporting/e5ebe447-dd3a-448f-a3e1-40e3b4a51a14/page/8CSbD)
