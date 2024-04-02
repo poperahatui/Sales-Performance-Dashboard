@@ -60,4 +60,4 @@ CREATE TABLE tabel_aggregate AS (SELECT id_invoice,
 GROUP BY id_invoice , tanggal , cabang_sales , nama_customer , 'group' , nama_barang , brand , jumlah_barang , unit , harga);
 ```
 ## Data Visualization
-View on Looker Data Studio page (https://lookerstudio.google.com/u/0/reporting/e5ebe447-dd3a-448f-a3e1-40e3b4a51a14/page/8CSbD)
+[View on Looker Data Studio page](https://lookerstudio.google.com/u/0/reporting/e5ebe447-dd3a-448f-a3e1-40e3b4a51a14/page/8CSbD)
